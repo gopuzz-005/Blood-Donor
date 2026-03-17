@@ -1,0 +1,199 @@
+/* General Layout */
+.about-container {
+    background-color: #ffffff;
+    color: #2b2d42;
+    line-height: 1.6;
+}
+
+.text-red { color: #e63946; }
+
+/* Hero Section */
+.about-hero {
+    background: linear-gradient(rgba(233, 132, 132, 0.432), rgba(255, 255, 255, 0.9)), 
+                url('../assets/archiveimage/bloodmicro.jpg') center/cover;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 800;
+  color: #e63946;
+}
+
+.hero-content p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Story Section */
+.story-section {
+    padding: 80px 10%;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.story-image {
+    position: relative;
+}
+
+.story-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 20px 20px 0px #f8f9fa;
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: #e63946;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(230, 57, 70, 0.3);
+}
+
+.experience-badge .years {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.story-text .subtitle {
+    color: #e63946;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.story-text h2 {
+    font-size: 2.5rem;
+    margin: 15px 0;
+}
+
+/* Stats Section */
+.stats-section {
+    background: #2b2d42;
+    color: white;
+    padding: 60px 10%;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.stat-card {
+    text-align: center;
+}
+
+.stat-card h3 {
+    font-size: 2.5rem;
+    color: #e63946;
+    margin-bottom: 5px;
+}
+
+/* Values Section */
+.values-section {
+    padding: 80px 10%;
+    background: #f8f9fa;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.header-line {
+    width: 60px;
+    height: 4px;
+    background: #e63946;
+    margin: 10px auto;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.value-card {
+    background: rgb(216, 192, 192);
+    padding: 40px;
+    border-radius: 15px;
+    transition: 0.3s;
+    border-bottom: 4px solid transparent;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    border-color: #e63946;
+}
+
+.value-icon {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: rgba(250, 0, 21, 0.838);
+    margin-bottom: 10px;
+}
+
+/* Footer CTA */
+.about-footer {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.footer-btns {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.primary-btn {
+    background: #e63946;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+ .cta-button{
+     background: #e63946;
+    color: white;
+    height: 60px;
+    width: 150px;
+    border-radius: 5px;
+    font-weight: 600;
+    position: relative;
+    top: 10px;
+    cursor: pointer;
+ }
+.secondary-btn {
+    background: transparent;
+    border: 2px solid #e63946;
+    color: #e63946;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .story-grid { grid-template-columns: 1fr; }
+    .hero-content h1 { font-size: 2rem; }
+}

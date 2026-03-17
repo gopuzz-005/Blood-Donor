@@ -1,0 +1,93 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+.custom-navbar {
+    font-family: 'Inter', sans-serif;
+    padding: 15px 0;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05); /* Soft shadow */
+    transition: all 0.3s ease;
+}
+.nav-cta-btn.dropdown-toggle::after {
+    display: none; /* Removes the arrow */
+}
+
+.dropdown-item:hover {
+    background-color: #ff0000; /* Or your theme color */
+    color: white;
+}
+/* Brand Styling */
+.brand-text {
+    font-weight: 800;
+    font-size: 1.4rem;
+    letter-spacing: -0.5px;
+    color: #1d3557;
+}
+
+.text-red {
+    color: #e63946;
+}
+
+.logo-icon {
+    font-size: 1.5rem;
+    margin-right: 8px;
+}
+
+/* Nav Link Styling */
+.navbar-nav .nav-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #457b9d !important;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #e63946 !important;
+}
+
+/* Login link styling */
+.login-link {
+    text-decoration: none;
+    color: #1d3557;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Call to Action Button */
+.nav-cta-btn {
+    background-color: #e63946;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 50px; /* Rounded pill shape */
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(230, 57, 70, 0.3);
+}
+
+.nav-cta-btn:hover {
+    background-color: #1d3557;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(29, 53, 87, 0.3);
+    color: white;
+}
+
+/* Mobile Toggler adjustments */
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        padding: 20px 0;
+        text-align: center;
+    }
+    .nav-cta-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .login-link {
+        display: none; /* Hide login text on mobile for cleaner look */
+    }
+}
