@@ -1,0 +1,144 @@
+/* src/styles/Inventory.css */
+
+.inventory-container {
+    padding-bottom: 50px;
+    font-family: 'Inter', sans-serif;
+}
+
+.inventory-header {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inventory-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #1e293b;
+    margin: 0;
+}
+
+/* --- GRID LAYOUT --- */
+.blood-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* --- BLOOD CARD --- */
+.blood-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border: 1px solid #f1f5f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.blood-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Color Coding Top Border */
+.blood-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: #e2e8f0;
+}
+
+/* Specific Colors for Groups */
+.blood-card.group-A::before { background: #ef4444; } /* Red */
+.blood-card.group-B::before { background: #3b82f6; } /* Blue */
+.blood-card.group-AB::before { background: #8b5cf6; } /* Purple */
+.blood-card.group-O::before { background: #10b981; } /* Green */
+
+.blood-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #f8fafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #475569;
+    margin-bottom: 15px;
+    border: 2px solid white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.stock-count {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 5px 0;
+}
+
+.unit-label {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* --- ACTION BUTTONS --- */
+.action-row {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.btn-icon {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.btn-minus {
+    background: #fff1f2;
+    color: #be123c;
+    border: 1px solid #fecaca;
+}
+
+.btn-minus:hover { background: #ffe4e6; }
+
+.btn-plus {
+    background: #f0fdf4;
+    color: #15803d;
+    border: 1px solid #bbf7d0;
+}
+
+.btn-plus:hover { background: #dcfce7; }
+
+/* Status Indicator */
+.status-indicator {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 12px;
+}
+
+.status-low { background: #fee2e2; color: #b91c1c; }
+.status-good { background: #ecfdf5; color: #047857; }

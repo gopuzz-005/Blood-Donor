@@ -1,0 +1,256 @@
+/* LandingPage.css */
+
+:root {
+  --primary-red: #ef4444;
+  --dark-navy: #1e293b;
+  --pure-white: #ffffff;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-800: #1f2937;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Roboto', sans-serif;
+  background-color: var(--pure-white);
+  color: var(--gray-800);
+}
+
+.landing-container {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Typography & Utilities */
+.text-red {
+  color: var(--primary-red);
+}
+
+.font-large {
+  font-size: 1.25rem;
+  line-height: 1.8;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #fff 0%, #fef2f2 100%);
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--dark-navy);
+  margin-bottom: 1rem;
+  letter-spacing: -0.05em;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #4b5563;
+  margin-bottom: 2.5rem;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Buttons */
+.primary-btn-red {
+  background-color: var(--primary-red);
+  color: var(--pure-white);
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(239, 68, 68, 0.3);
+}
+
+.primary-btn-red:hover {
+  background-color: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(239, 68, 68, 0.4);
+}
+
+.secondary-btn-outline {
+  background-color: transparent;
+  color: var(--primary-red);
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid var(--primary-red);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secondary-btn-outline:hover {
+  background-color: var(--primary-red);
+  color: var(--pure-white);
+}
+
+/* Zigzag Info Section */
+.info-section {
+  padding: 5rem 2rem;
+  background-color: var(--pure-white);
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.zigzag-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 4rem;
+}
+
+.zigzag-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.zigzag-image {
+  flex: 1;
+}
+
+.zigzag-text {
+  flex: 1;
+}
+
+.zigzag-text h2 {
+  font-size: 2.5rem;
+  color: var(--dark-navy);
+  margin-bottom: 1.5rem;
+}
+
+.hero-description {
+  color: #4b5563;
+  line-height: 1.8;
+  font-size: 1.125rem;
+}
+
+.rounded-img {
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+.shadow-lg {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Footer CTA */
+.footer-cta {
+  background-color: var(--dark-navy);
+  color: var(--pure-white);
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.footer-title {
+  font-size: 3rem;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+}
+
+.cta-button-red {
+  background-color: var(--primary-red);
+  color: var(--pure-white);
+  padding: 1rem 4rem;
+  border-radius: 9999px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button-red:hover {
+  background-color: #dc2626;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
+}
+
+/* Toast Notification */
+.toast-notification {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--dark-navy);
+  color: var(--pure-white);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+  border-bottom: 4px solid #10b981; /* Green border */
+  z-index: 1000;
+  animation: slideUp 0.5s ease-out;
+}
+
+.toast-icon {
+  background-color: #10b981;
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .zigzag-row, .zigzag-row.reverse {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .info-section {
+    padding: 3rem 1.5rem;
+    gap: 4rem;
+  }
+  
+  .footer-title {
+    font-size: 2rem;
+  }
+}

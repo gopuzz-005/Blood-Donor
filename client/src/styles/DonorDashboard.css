@@ -1,0 +1,195 @@
+.donor-dash-container {
+    padding-bottom: 50px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Header */
+.donor-dash-header {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.donor-dash-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #1e293b;
+    margin: 0;
+}
+
+.donor-dash-subtitle {
+    color: #64748b;
+    margin-top: 5px;
+    font-size: 0.95rem;
+}
+
+/* --- STATS CARDS --- */
+.donor-dash-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+.donor-dash-stat-card {
+    background: white;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    border: 1px solid #f1f5f9;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.donor-dash-stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.donor-dash-stat-icon-wrapper {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    font-size: 1.8rem;
+}
+
+/* Theme Colors for Donor */
+.donor-dash-bg-rose { background: #fff1f2; color: #be123c; }
+.donor-dash-bg-teal { background: #f0fdfa; color: #0d9488; }
+.donor-dash-bg-amber { background: #fffbeb; color: #b45309; }
+.donor-dash-bg-indigo { background: #e0e7ff; color: #4338ca; }
+
+.donor-dash-stat-content h3 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+}
+
+.donor-dash-stat-content p {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin: 4px 0 0 0;
+    font-weight: 500;
+}
+
+/* --- HEALTH & CHARTS --- */
+.donor-dash-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* 1/3 Health, 2/3 Chart */
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+/* Health Card - Redesigned */
+.donor-dash-health-card {
+    background: white;
+    color: #1e293b;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    border: 1px solid #f1f5f9;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.donor-dash-health-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.donor-dash-health-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #be123c;
+}
+
+.donor-dash-health-metric {
+    margin-bottom: 20px;
+    background: #fff1f2;
+    padding: 15px;
+    border-radius: 12px;
+    border-left: 4px solid #be123c;
+}
+
+.donor-dash-health-metric span {
+    font-size: 0.85rem;
+    color: #881337;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.donor-dash-health-metric h2 {
+    font-size: 1.8rem;
+    margin: 5px 0 0;
+    font-weight: 800;
+    color: #be123c;
+}
+
+/* Chart Card */
+.donor-dash-chart-card {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    border: 1px solid #f1f5f9;
+}
+
+.donor-dash-chart-header h4 {
+    margin: 0 0 20px;
+    font-size: 1.1rem;
+    color: #334155;
+    font-weight: 700;
+}
+
+/* --- RECENT DONATIONS TABLE --- */
+.donor-dash-table-card {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    border: 1px solid #f1f5f9;
+}
+
+.donor-dash-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.donor-dash-table th {
+    text-align: left;
+    padding: 15px;
+    color: #94a3b8;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.donor-dash-table td {
+    padding: 15px;
+    color: #334155;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #f8fafc;
+}
+
+/* Badges */
+.donor-dash-badge-fulfilled { background: #dcfce7; color: #166534; padding: 6px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; }
+.donor-dash-badge-scheduled { background: #e0f2fe; color: #0369a1; padding: 6px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; }
+
+@media (max-width: 1024px) {
+    .donor-dash-row {
+        grid-template-columns: 1fr;
+    }
+}

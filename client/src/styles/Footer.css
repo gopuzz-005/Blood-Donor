@@ -1,0 +1,89 @@
+/* src/styles/Footer.css */
+
+.footer-section {
+  background-color: #0f172a; /* Dark Slate - Professional & Deep */
+  color: #94a3b8; /* Soft Slate Gray for text */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Optional: Top decorative border */
+.footer-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #d32f2f, #ff5252, #d32f2f);
+}
+
+.footer-logo-text {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+  background: linear-gradient(45deg, #fff, #e2e8f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Link Styling with Slide Effect */
+.footer-link {
+  display: block;
+  text-decoration: none;
+  color: #94a3b8;
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+  transform: translateX(8px); /* Slide right on hover */
+}
+
+.footer-link::before {
+  content: '›';
+  position: absolute;
+  left: -15px;
+  opacity: 0;
+  color: #d32f2f;
+  transition: all 0.3s ease;
+}
+
+.footer-link:hover::before {
+  opacity: 1;
+  left: -10px;
+}
+
+/* Social Icons Hover with Glow */
+.social-icon-btn {
+  transition: all 0.3s ease !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.social-icon-btn:hover {
+  background: #d32f2f !important;
+  color: white !important;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(211, 47, 47, 0.4);
+}
+
+/* Input Field Customization */
+.newsletter-input .MuiOutlinedInput-root {
+  color: white;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.newsletter-input .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.newsletter-input:hover .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.newsletter-input .Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #d32f2f !important;
+}

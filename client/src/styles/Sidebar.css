@@ -1,0 +1,237 @@
+/* src/styles/Sidebar.css */
+
+:root {
+    --sidebar-width: 270px;
+    --text-main: #64748b;
+    --text-dark: #0f172a;
+    
+    /* Specific Theme Colors */
+    --theme-user: #ef4444;    /* Red */
+    --theme-admin: #7c3aed;   /* Deep Purple */
+    --theme-hospital: #0ea5e9;/* Sky Blue */
+    --theme-donor: #be123c;   /* Rose/Maroon */
+}
+
+/* Base Sidebar Structure */
+.sidebar {
+    width: var(--sidebar-width);
+    height: 100vh;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #e2e8f0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    box-shadow: 4px 0 24px rgba(0,0,0,0.01);
+}
+
+/* Header Section */
+.sidebar-header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+}
+
+.brand-title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    letter-spacing: -0.5px;
+}
+
+/* Profile Section */
+.profile-section {
+    padding: 0 25px 25px 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+}
+
+.profile-info h4 { margin: 0; font-size: 0.95rem; color: var(--text-dark); }
+.profile-info p { margin: 0; font-size: 0.8rem; color: #94a3b8; text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; }
+
+/* Navigation Links */
+.nav-menu {
+    flex: 1;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    overflow-y: auto;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 14px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 500;
+    transition: all 0.25s ease;
+}
+
+.nav-link:hover {
+    background-color: #f8fafc;
+    color: var(--text-dark);
+    transform: translateX(4px);
+}
+
+/* Footer / Logout */
+.sidebar-footer {
+    padding: 20px 25px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.logout-btn {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #fee2e2;
+    background: #fff;
+    color: #ef4444;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.2s;
+}
+
+.logout-btn:hover { background: #fef2f2; }
+
+/* --- THEME VARIATIONS --- */
+
+/* User Theme (Red) */
+.theme-user .brand-highlight { color: var(--theme-user); }
+.theme-user .avatar { background: var(--theme-user); box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3); }
+.theme-user .nav-link.active { background: #fef2f2; color: var(--theme-user); font-weight: 700; }
+
+/* Admin Theme (Purple) */
+.theme-admin .brand-highlight { color: var(--theme-admin); }
+.theme-admin .avatar { background: var(--theme-admin); box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3); }
+.theme-admin .nav-link.active { background: #f5f3ff; color: var(--theme-admin); font-weight: 700; }
+
+/* Hospital Theme (Blue) */
+.theme-hospital .brand-highlight { color: var(--theme-hospital); }
+.theme-hospital .avatar { background: var(--theme-hospital); box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3); }
+.theme-hospital .nav-link.active { background: #e0f2fe; color: var(--theme-hospital); font-weight: 700; }
+
+/* Donor Theme (Maroon) */
+.theme-donor .brand-highlight { color: var(--theme-donor); }
+.theme-donor .avatar { background: var(--theme-donor); box-shadow: 0 4px 12px rgba(190, 18, 60, 0.3); }
+.theme-donor .nav-link.active { background: #fff1f2; color: var(--theme-donor); font-weight: 700; }
+/* ... existing sidebar styles ... */
+
+/* --- LOGOUT MODAL STYLES --- */
+.modal-overlay {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dim Background */
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+.logout-modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 350px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    animation: scaleUp 0.2s ease-in-out;
+}
+
+.modal-icon-wrapper {
+    background: #fef2f2;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px;
+}
+
+.logout-modal-content h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #1e293b;
+    font-weight: 700;
+}
+
+.logout-modal-content p {
+    color: #64748b;
+    font-size: 0.95rem;
+    margin: 10px 0 25px;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-cancel, .btn-confirm {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.95rem;
+    border: none;
+    transition: 0.2s;
+}
+
+.btn-cancel {
+    background: #f1f5f9;
+    color: #64748b;
+}
+
+.btn-cancel:hover { background: #e2e8f0; }
+
+.btn-confirm {
+    background: #ef4444;
+    color: white;
+}
+
+.btn-confirm:hover { background: #dc2626; box-shadow: 0 4px 12px rgba(220, 38, 38, 0.25); }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes scaleUp { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+/* Donor Theme (Maroon/Rose) */
+.theme-donor .brand-highlight { color: #be123c; }
+.theme-donor .avatar { background: #be123c; box-shadow: 0 4px 12px rgba(190, 18, 60, 0.3); }
+.theme-donor .nav-link.active { background: #fff1f2; color: #be123c; font-weight: 700; }
+.theme-hospital .brand-highlight { color: #0ea5e9; }
+.theme-hospital .avatar { background: #0ea5e9; box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3); }
+.theme-hospital .nav-link.active { background: #e0f2fe; color: #0ea5e9; font-weight: 700; }
+/* Admin Theme (Purple) */
+.theme-admin .brand-highlight { color: #7c3aed; }
+.theme-admin .avatar { background: #7c3aed; box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3); }
+.theme-admin .nav-link.active { background: #f5f3ff; color: #7c3aed; font-weight: 700; }

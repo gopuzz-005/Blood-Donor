@@ -1,0 +1,200 @@
+/* Container Background matching your screenshot */
+.profile-container {
+    padding: 40px;
+    background-color: #fffafa; /* Light pinkish white */
+    min-height: 100vh;
+}
+
+/* Header Area */
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.profile-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #1e293b;
+    margin: 0;
+}
+
+.profile-subtitle {
+    color: #64748b;
+    margin-top: 5px;
+}
+
+/* Edit Button Styling */
+.edit-toggle-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    background: white;
+    color: #3b82f6;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.edit-toggle-btn.active {
+    background: #3b82f6;
+    color: white;
+    border: none;
+}
+
+.edit-toggle-btn:hover {
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+/* Grid Layout */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 30px;
+}
+
+/* Base Card Style */
+.profile-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+/* Avatar Column */
+.avatar-card {
+    text-align: center;
+}
+
+.avatar-circle {
+    width: 140px;
+    height: 140px;
+    background: #eff6ff;
+    color: #3b82f6;
+    font-size: 56px;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    border: 5px solid #f8fafc;
+}
+
+.user-label {
+    background: #f1f5f9;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #64748b;
+    display: inline-block;
+}
+
+.stats-row {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.stat-num {
+    display: block;
+    font-size: 28px;
+    font-weight: 800;
+    color: #1e293b;
+}
+
+.status-active {
+    color: #22c55e;
+}
+
+.stat-text {
+    font-size: 12px;
+    color: #94a3b8;
+    letter-spacing: 1px;
+}
+
+/* Form Styling */
+.section-main-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 40px;
+}
+
+.section-sub-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #3b82f6;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.input-group input, 
+.input-group select {
+    padding: 14px 18px;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    font-size: 15px;
+    background: #ffffff;
+    transition: 0.2s;
+}
+
+.input-group input:focus {
+    border-color: #3b82f6;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+.input-group input:disabled {
+    background-color: #f8fafc;
+    border-color: #e2e8f0;
+    color: #94a3b8;
+    cursor: not-allowed;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.form-actions {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.cancel-btn {
+    background: none;
+    border: none;
+    color: #ef4444;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+}

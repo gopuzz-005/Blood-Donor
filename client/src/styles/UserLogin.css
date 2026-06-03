@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-red: #d32f2f;
+  --primary-dark: #b71c1c;
+  --text-main: #1e293b;
+  --text-light: #64748b;
+  --bg-color: #f1f5f9;
+  --white: #ffffff;
+}
+
+/* Base Reset to prevent sizing issues */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.user-log-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color);
+  padding: 20px;
+}
+
+.user-log-container {
+  display: flex;
+  width: 100%;
+  max-width: 1000px; /* Standard size for login cards */
+  background: var(--white);
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  overflow: hidden;
+  min-height: 600px;
+}
+
+/* 1. Shrink the Red Side */
+.user-log-image-side {
+  flex: 0 0 38%; /* Fixed width for the red side */
+  background: url('https://images.unsplash.com/photo-1615461166324-cd1f91f7b90d?q=80&w=1000&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.user-log-overlay {
+  background: linear-gradient(135deg, rgba(211, 47, 47, 0.95), rgba(30, 41, 59, 0.9));
+  height: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+/* 2. Expand and Align the Form Side */
+.user-log-form-side {
+  flex: 1; /* Takes up the remaining 62% */
+  padding: 60px; /* Balanced padding */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.user-log-header {
+  margin-bottom: 40px;
+}
+
+.user-log-header h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+/* 3. INPUT ALIGNMENT LOGIC */
+.user-log-input-group {
+  position: relative;
+  width: 100%; /* Ensures box fills the form side */
+  margin-bottom: 25px;
+}
+
+.user-log-input-group input {
+  width: 100%;
+  height: 55px; /* Fixed height for better touch/click targets */
+  padding: 0 20px 0 52px; /* 52px padding-left makes room for the icon */
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #f8fafc;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.user-log-input-group input:focus {
+  border-color: var(--primary-red);
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(211, 47, 47, 0.1);
+}
+
+/* Icon Positioning inside the box */
+.user-log-icon {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%); /* Perfectly centers the icon vertically */
+  color: var(--text-light);
+  font-size: 1.3rem !important;
+  pointer-events: none; /* Icon won't block clicks on input */
+}
+
+/* Password Toggle Eye Positioning */
+.user-log-password-toggle {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+}
+
+/* Footer & Options Alignment */
+.user-log-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 0.95rem;
+}
+
+.user-log-options label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: var(--text-light);
+}
+
+.user-log-options input[type="checkbox"] {
+  margin-right: 8px;
+  width: 17px;
+  height: 17px;
+  accent-color: var(--primary-red);
+}
+
+.user-log-btn {
+  width: 100%;
+  height: 55px;
+  background: linear-gradient(135deg, var(--primary-red), var(--primary-dark));
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(211, 47, 47, 0.2);
+  transition: transform 0.2s;
+}
+
+.user-log-btn:hover {
+  transform: translateY(-2px);
+}
+
+.user-log-footer {
+  text-align: center;
+  margin-top: 30px;
+  color: var(--text-light);
+}
+
+.user-log-footer a {
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: 5px;
+}
+
+.user-log-error-text {
+  color: #ef4444;
+  font-size: 0.85rem;
+  margin-top: 5px;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .user-log-container {
+    flex-direction: column;
+    max-width: 500px;
+  }
+  .user-log-image-side {
+    flex: 0 0 200px;
+  }
+  .user-log-form-side {
+    padding: 40px 30px;
+  }
+}

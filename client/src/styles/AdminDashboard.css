@@ -1,0 +1,40 @@
+/* src/styles/AdminDashboard.css */
+
+.admin-container { padding-bottom: 50px; font-family: 'Inter', sans-serif; }
+.admin-header { margin-bottom: 30px; }
+.admin-title { font-size: 1.8rem; font-weight: 800; color: #1e293b; margin: 0; }
+
+/* --- STATS --- */
+.admin-stats-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin-bottom: 30px;
+}
+.admin-card {
+    background: white; padding: 24px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    border: 1px solid #f1f5f9; display: flex; align-items: center; transition: 0.3s;
+}
+.admin-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
+
+.admin-icon-box {
+    width: 56px; height: 56px; border-radius: 14px; display: flex; align-items: center; justify-content: center;
+    margin-right: 20px; font-size: 1.8rem;
+}
+
+/* Admin Colors */
+.bg-purple { background: #f3e8ff; color: #9333ea; }
+.bg-orange { background: #ffedd5; color: #ea580c; }
+.bg-teal { background: #ccfbf1; color: #0d9488; }
+.bg-rose { background: #ffe4e6; color: #e11d48; }
+
+.admin-content h3 { font-size: 1.6rem; font-weight: 800; margin: 0; color: #0f172a; }
+.admin-content p { font-size: 0.9rem; color: #64748b; margin: 4px 0 0 0; }
+
+/* --- CHARTS --- */
+.admin-charts-row {
+    display: grid; grid-template-columns: 2fr 1fr; gap: 24px; margin-bottom: 30px;
+}
+.chart-box {
+    background: white; padding: 25px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); border: 1px solid #f1f5f9;
+}
+.chart-box h4 { margin: 0 0 20px; color: #334155; font-size: 1.1rem; }
+
+@media (max-width: 1024px) { .admin-charts-row { grid-template-columns: 1fr; } }
